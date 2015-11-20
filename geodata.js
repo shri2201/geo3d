@@ -1,7 +1,9 @@
 var MongoClient = require('mongodb').MongoClient;
 
+var connectStringMongoDB = 'mongodb://localhost:27017/NL';
+
 exports.getCityData = function(query, selector, callback) {
-  MongoClient.connect('mongodb://localhost:27017/NL', function(err, db) {
+  MongoClient.connect(connectStringMongoDB, function(err, db) {
     if (err) throw err;
     db.collection('features').findOne(query, selector, function(err, doc) {
       if (err) {
@@ -15,7 +17,7 @@ exports.getCityData = function(query, selector, callback) {
 }
 
 exports.getCitiesData = function(query, selector, callback) {
-  MongoClient.connect('mongodb://localhost:27017/NL', function(err, db) {
+  MongoClient.connect(connectStringMongoDB, function(err, db) {
     if (err) throw err;
     db.collection('features').find(query, selector).toArray(function(err, docs) {
       if (err) {
@@ -23,7 +25,6 @@ exports.getCitiesData = function(query, selector, callback) {
         throw err;
       }
       db.close();
-      console.log(docs);
       callback(docs);
     });
   });

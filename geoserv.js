@@ -3,13 +3,11 @@ var geodata = require('./geodata');
 
 
 function getData(req, res, next) {
-  console.log("in city")
+
   var place = req.params.id;
   var radius = parseInt(req.query.radius);
   var maxPop = parseInt(req.query.maxpop);
   var minPop = parseInt(req.query.minpop);
-
-
 
   var query = {
     'asciiname': place,
@@ -88,6 +86,7 @@ function getData(req, res, next) {
     }
   });
 }
+
 
 var server = restify.createServer();
 

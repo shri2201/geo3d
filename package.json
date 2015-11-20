@@ -4,12 +4,16 @@
   "description": "Geospatial API by Anurag",
   "main": "geoserv.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node geoserv.js"
   },
   "keywords": [
     "geo3d",
     "mongodb"
   ],
   "author": "Anurag Shrivastava",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^2.0.49",
+    "restify": "^4.0.3"
+  }
 }
