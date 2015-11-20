@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 
-var connectStringMongoDB = 'mongodb://localhost:27017/NL';
+var connectStringMongoDB = process.env.MONGOURL || 'mongodb://localhost:27017/NL';
 
 exports.getCityData = function(query, selector, callback) {
   MongoClient.connect(connectStringMongoDB, function(err, db) {
