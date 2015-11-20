@@ -1,0 +1,15 @@
+{
+  "name": "mug",
+  "version": "1.0.0",
+  "description": "Geospatial API by Anurag",
+  "main": "geoserv.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "geo3d",
+    "mongodb"
+  ],
+  "author": "Anurag Shrivastava",
+  "license": "MIT"
+}
